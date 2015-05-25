@@ -2,6 +2,7 @@ class SessionsController < ApplicationController
   skip_before_action :ensure_current_user
 
   def new
+    puts "**********Session New"
     @user = User.new
   end
 
@@ -18,6 +19,7 @@ class SessionsController < ApplicationController
   end
 
   def destroy
+    puts "**********Session Destroy"
     session.destroy
     redirect_to signin_path
   end

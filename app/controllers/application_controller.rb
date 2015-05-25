@@ -4,6 +4,7 @@ class ApplicationController < ActionController::Base
   before_action :ensure_current_user
 
   def ensure_current_user
+    binding.pry
     redirect_to signin_path unless current_user
   end
 
